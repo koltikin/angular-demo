@@ -7,6 +7,7 @@
 <br>
 <button class="btn btn-danger mt-3" [disabled]="isDiabled2" (click)="onClick2($event)">Click Me2!</button>
 
+<div class="row">
 <div class="col-6">
      <!-- -------- old two way bidding --------- -->
     <div class="input-group m-3">
@@ -26,8 +27,17 @@
     <!-- --------- element referance ------------------->
 
     <h3 #h3ref>this is a  h3 header element</h3>
-    <button class="btn btn-secondary mt-2" (click)="refrenceMothod()">
+    <button class="btn btn-secondary m-2" (click)="refrenceMothod()">
         Click Me
     </button>
+
+    <button class="btn btn-secondary m-2" (click)="changeImage()">
+        Change Image
+    </button>
        
+</div>
+
+<div class="col-6">
+    <img [src]="imageSorce" height="300px" width="auto" alt="">
+</div>
 </div>

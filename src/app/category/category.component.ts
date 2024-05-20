@@ -47,4 +47,9 @@ export class CategoryComponent {
     console.log(this.ref)
   }
 
+  // change image
+  imageSorce:string = "https://iadsb.tmgrup.com.tr/7ddb86/0/0/0/0/1926/1086?u=https://idsb.tmgrup.com.tr/2018/05/22/horses-the-wings-of-mankind-1527015927739.jpg";
+  changeImage() {
+    this.imageSorce = "https://thumbor.bigedition.com/black-friesian-one-of-the-most-expensive-horse-breeds/LWv_ujYz_EbXa0gck2GGMCPXHYc=/800x600/filters:format(webp):quality(80)/granite-web-prod/1c/b1/1cb13f2de91349acab266dea511cee5f.jpeg";
+  }
 }

@@ -5,15 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CategoryComponent } from './bindding/category.component';
-import { InvoiceComponent } from './invoice/invoice.component';
 import { FormsModule } from '@angular/forms';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CategoryComponent,
-    InvoiceComponent
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,

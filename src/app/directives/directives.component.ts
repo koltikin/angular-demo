@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Mentor } from '../shared/mentor';
 
 @Component({
   selector: 'app-directives',
@@ -24,4 +25,11 @@ export class DirectivesComponent {
     this.buttonText = "Show Mentors";
     }
   }
+
+  myMentors: Mentor[] = [
+    new Mentor('Ziya',66),
+    new Mentor('Alim',25),
+    new Mentor('Yusuf'),
+    new Mentor('Seyfullah',45)
+  ]
 }

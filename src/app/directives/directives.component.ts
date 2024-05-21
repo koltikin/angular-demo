@@ -17,6 +17,7 @@ export class DirectivesComponent {
 
   buttonText: string = "Show Mentors";
   showMentor(){
+    this.Imentors[0].likeCount++;
     if(!this.mentors){
     this.mentors = ["Ziya","Alim","Yusuf"];
     this.buttonText = "Hide Mentors";
@@ -31,5 +32,17 @@ export class DirectivesComponent {
     new Mentor('Alim',25),
     new Mentor('Yusuf'),
     new Mentor('Seyfullah',45)
+  ];
+
+  Imentors: IMentor[] = [
+    {name: 'Muhammd', likeCount: 5},
+    {name: 'Safiye', likeCount: 4},
+    {name: 'Seyfullah', likeCount: 3}
   ]
 }
+
+interface IMentor{
+  name:string;
+  likeCount:number;
+}
+

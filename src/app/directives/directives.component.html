@@ -29,6 +29,12 @@
       </li>
     </ul>
 
+    <ul class="list-group" *ngIf="Imentors">
+      <li class="list-group-item" *ngFor="let mentor of Imentors">
+        {{ mentor.name + ", " + mentor.likeCount }}
+      </li>
+    </ul>
+
     <button class="btn btn-info" (click)="showMentor()">
       {{ buttonText }}
     </button>

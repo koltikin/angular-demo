@@ -1,10 +1,10 @@
 <div class="row d-flex justify-content-center">
-  <h5 class="text-center">Student id: {{ selectedStudent.id }}</h5>
+  <h5 class="text-center">Student id: {{ selectedStudent!.id }}</h5>
   <div class="card" style="width: 10rem">
-    <img src="{{ selectedStudent.pictrue }}" class="ceard-img-top" />
+    <img src="{{ selectedStudent!.pictrue }}" class="ceard-img-top" />
     <div class="card-body text-center">
-      <h5 class="card-title">{{ selectedStudent.name }}</h5>
-      <h6 class="card-title">Like count: {{ selectedStudent.likeCount }}</h6>
+      <h5 class="card-title">{{ selectedStudent!.name }}</h5>
+      <h6 class="card-title">Like count: {{ selectedStudent!.likeCount }}</h6>
     </div>
     <div class="btn btn-primary mb-2" routerLink="/routes">Go Back</div>
     <div class="btn btn-primary mb-2" (click)="goBack()">Go Back</div>

@@ -8,7 +8,7 @@ import { Location } from '@angular/common';
   templateUrl: './details.component.html',
   styleUrl: './details.component.css'
 })
-export class DetailsComponent{
+export class DetailsComponent implements OnInit{
 
   students: Student[] = [
     new Student(1,'Ziya',60,'assets/images/ziya.png'),
@@ -16,10 +16,11 @@ export class DetailsComponent{
     new Student(3,'Yusuf',18,'assets/images/yusuf.png')
   ];
 
-  selectedStudent: Student;
-
   constructor(private route: ActivatedRoute, private location: Location){
+  }
 
+  selectedStudent?: Student;
+  ngOnInit(): void {
     let index = Number(this.route.snapshot.paramMap.get('id'))
     this.selectedStudent = this.students[index-1];
   }

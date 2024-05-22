@@ -28,10 +28,10 @@ export class DirectivesComponent {
   }
 
   myMentors: Mentor[] = [
-    new Mentor('Ziya',66),
-    new Mentor('Alim',25),
-    new Mentor('Yusuf'),
-    new Mentor('Seyfullah',45)
+    new Mentor(1,'Ziya',66),
+    new Mentor(2,'Alim',25),
+    new Mentor(3,'Yusuf',13),
+    new Mentor(4,'Seyfullah',45)
   ];
 
   Imentors: IMentor[] = [

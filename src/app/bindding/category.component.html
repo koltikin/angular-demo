@@ -1,43 +1,55 @@
 <h2>category works!</h2>
-<h2>{{title | uppercase}}</h2>
-<p>{{age | currency}}</p>
-<br>
-<button class="btn btn-primary" (click)="onClick1($event)" (mouseover)="mouseHover()" [disabled]="isDiabled1">Click
-    Me1!</button>
-<br>
-<button class="btn btn-danger mt-3" [disabled]="isDiabled2" (click)="onClick2($event)">Click Me2!</button>
+<h2>{{ title | uppercase }}</h2>
+<p>{{ age | currency }}</p>
+<br />
+<button
+  class="btn btn-primary"
+  (click)="onClick1($event)"
+  (mouseover)="mouseHover()"
+  [disabled]="isDiabled1"
+>
+  Click Me1!
+</button>
+<br />
+<button
+  class="btn btn-danger mt-3"
+  [disabled]="isDiabled2"
+  (click)="onClick2($event)"
+>
+  Click Me2!
+</button>
 
 <div class="row">
-<div class="col-6">
-     <!-- -------- old two way bidding --------- -->
+  <div class="col-6">
+    <!-- -------- old two way bidding --------- -->
     <div class="input-group m-3">
-        <input #demoInput type="text" class="form-control" [value]="message">
-        <button class="btn btn-danger"
-                (click)="onSubmit(demoInput.value)">Submit</button>
+      <input #demoInput type="text" class="form-control" [value]="message" />
+      <button class="btn btn-danger" (click)="onSubmit(demoInput.value)">
+        Submit
+      </button>
     </div>
 
-     <!-- ------------ new two way biding ---------- -->
+    <!-- ------------ new two way biding ---------- -->
     <div class="input-group m-3">
-        <input type="text" [(ngModel)]="anyString" class="form-control">
+      <input type="text" [(ngModel)]="anyString" class="form-control" />
     </div>
     <div class="m-3">
-       <h2>{{anyString}}</h2> 
+      <h2>{{ anyString }}</h2>
     </div>
-    
+
     <!-- --------- element referance ------------------->
 
-    <h3 #h3ref>this is a  h3 header element</h3>
+    <h3 #h3ref>this is a h3 header element</h3>
     <button class="btn btn-secondary m-2" (click)="refrenceMothod()">
-        Click Me
+      Click Me
     </button>
 
     <button class="btn btn-secondary m-2" (click)="changeImage()">
-        Change Image
+      Change Image
     </button>
-       
-</div>
+  </div>
 
-<div class="col-6">
-    <img [src]="imageSorce" height="300px" width="auto" alt="">
-</div>
+  <div class="col-6">
+    <img [src]="imageSorce" height="300px" width="auto" alt="" />
+  </div>
 </div>

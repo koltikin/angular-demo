@@ -19,7 +19,15 @@ export class ParentComponent {
 
   onSelected(mentor: Mentor){
     this.selectedP = mentor;
-    console.log(this.selectedP.name);
+    // console.log(this.selectedP.name);
+  }
+
+  onLike(id: number){
+    let index = this.mentors.findIndex(mentor=>mentor.idNum === id)
+    this.mentors[index].name = this.mentors[index].name + ' liked';
+
+    console.log(id);
+
   }
 
 }

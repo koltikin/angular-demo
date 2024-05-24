@@ -16,6 +16,6 @@
   <div class="col-6 pb-2 text-white" style="background-color: rgb(3, 145, 3)">
     <h2>Child Side</h2>
     <br />
-    <app-child [selectedC]="selectedP"></app-child>
+    <app-child [selectedC]="selectedP" (likeEvent)="onLike($event)"></app-child>
   </div>
 </div>

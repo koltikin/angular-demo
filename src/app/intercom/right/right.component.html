@@ -1,5 +1,21 @@
 <div class="row">
   <div class="col-12 p-3 text-white" style="background-color: rgb(50, 50, 223)">
     <h2 class="text-center">Right Componet</h2>
+
+    <div class="row d-flex justify-content-center">
+      <h5 class="text-center">Mentor id: {{ selectedMentor?.idNum }}</h5>
+      <div class="card" style="width: 10rem">
+        <img src="assets/images/ziya.png" class="ceard-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ selectedMentor?.name }}</h5>
+          <h6 class="card-title">
+            Like count: {{ selectedMentor?.likeCount }}
+          </h6>
+        </div>
+        <a class="btn btn-primary mb-2" (click)="onLikeMentor(selectedMentor!)"
+          >Like Me</a
+        >
+      </div>
+    </div>
   </div>
 </div>

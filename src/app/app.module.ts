@@ -24,7 +24,8 @@ const routes: Routes =[
   {path: 'xcom', component:ParentComponent},
   {path: 'service', component:ServiceDemoComponent},
   {path: 'intercom', component:LeftComponent},
-  {path: 'right', component:RightComponent}
+  {path: 'right', component:RightComponent},
+  {path: 'left', component:LeftComponent}
 ]
 @NgModule({
   declarations: [

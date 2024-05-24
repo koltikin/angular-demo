@@ -18,7 +18,7 @@ export class LeftComponent implements OnInit {
   }
 
   onSelectMentor(mentor: Mentor){
-    console.log(mentor.name);
+    this.mentorService.selectedMentor = mentor;
     this.router.navigate(['right']);
   }
 

@@ -13,6 +13,8 @@ import { DetailsComponent } from './routting/details/details.component';
 import { ParentComponent } from './xcom/parent/parent.component';
 import { ChildComponent } from './xcom/child/child.component';
 import { ServiceDemoComponent } from './service-demo/service-demo.component';
+import { RightComponent } from './intercom/right/right.component';
+import { LeftComponent } from './intercom/left/left.component';
 
 const routes: Routes =[
   {path: 'bindings', component:CategoryComponent},
@@ -20,7 +22,9 @@ const routes: Routes =[
   {path: 'routes', component:RouttingComponent},
   {path: 'mentor/:id', component:DetailsComponent},
   {path: 'xcom', component:ParentComponent},
-  {path: 'service', component:ServiceDemoComponent}
+  {path: 'service', component:ServiceDemoComponent},
+  {path: 'intercom', component:LeftComponent},
+  {path: 'right', component:RightComponent}
 ]
 @NgModule({
   declarations: [
@@ -32,7 +36,9 @@ const routes: Routes =[
     DetailsComponent,
     ParentComponent,
     ChildComponent,
-    ServiceDemoComponent
+    ServiceDemoComponent,
+    RightComponent,
+    LeftComponent
   ],
   imports: [
     BrowserModule,

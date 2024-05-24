@@ -10,12 +10,15 @@ import { DirectivesComponent } from './directives/directives.component';
 import { RouttingComponent } from './routting/routting.component';
 import { Route, RouterModule, Routes } from '@angular/router';
 import { DetailsComponent } from './routting/details/details.component';
+import { ParentComponent } from './xcom/parent/parent.component';
+import { ChildComponent } from './xcom/child/child.component';
 
 const routes: Routes =[
   {path: 'bindings', component:CategoryComponent},
   {path: 'directives', component:DirectivesComponent},
   {path: 'routes', component:RouttingComponent},
-  {path: 'mentor/:id', component:DetailsComponent}
+  {path: 'mentor/:id', component:DetailsComponent},
+  {path: 'xcom', component:ParentComponent}
 ]
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ const routes: Routes =[
     CategoryComponent,
     DirectivesComponent,
     RouttingComponent,
-    DetailsComponent
+    DetailsComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

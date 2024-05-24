@@ -12,13 +12,15 @@ import { Route, RouterModule, Routes } from '@angular/router';
 import { DetailsComponent } from './routting/details/details.component';
 import { ParentComponent } from './xcom/parent/parent.component';
 import { ChildComponent } from './xcom/child/child.component';
+import { ServiceDemoComponent } from './service-demo/service-demo.component';
 
 const routes: Routes =[
   {path: 'bindings', component:CategoryComponent},
   {path: 'directives', component:DirectivesComponent},
   {path: 'routes', component:RouttingComponent},
   {path: 'mentor/:id', component:DetailsComponent},
-  {path: 'xcom', component:ParentComponent}
+  {path: 'xcom', component:ParentComponent},
+  {path: 'service', component:ServiceDemoComponent}
 ]
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ const routes: Routes =[
     RouttingComponent,
     DetailsComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    ServiceDemoComponent
   ],
   imports: [
     BrowserModule,

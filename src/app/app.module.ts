@@ -8,13 +8,15 @@ import { CategoryComponent } from './bindding/category.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { RouttingComponent } from './routting/routting.component';
-import { Route, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { DetailsComponent } from './routting/details/details.component';
 import { ParentComponent } from './xcom/parent/parent.component';
 import { ChildComponent } from './xcom/child/child.component';
 import { ServiceDemoComponent } from './service-demo/service-demo.component';
 import { RightComponent } from './intercom/right/right.component';
 import { LeftComponent } from './intercom/left/left.component';
+import { PostComponent } from './post/post.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes =[
   {path: 'bindings', component:CategoryComponent},
@@ -25,7 +27,8 @@ const routes: Routes =[
   {path: 'service', component:ServiceDemoComponent},
   {path: 'intercom', component:LeftComponent},
   {path: 'right', component:RightComponent},
-  {path: 'left', component:LeftComponent}
+  {path: 'left', component:LeftComponent},
+  {path: 'post', component:PostComponent}
 ]
 @NgModule({
   declarations: [
@@ -39,13 +42,15 @@ const routes: Routes =[
     ChildComponent,
     ServiceDemoComponent,
     RightComponent,
-    LeftComponent
+    LeftComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   exports:[RouterModule],
   providers: [],

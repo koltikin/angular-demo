@@ -14,6 +14,8 @@ export class LeftComponent implements OnInit {
   constructor(private mentorService: MentorService, private router: Router){}
 
   ngOnInit(): void {
+    this.mentorService.fetchMentor$();
+
     this.mentors = this.mentorService.mentors;
   }
 

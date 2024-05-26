@@ -21,7 +21,7 @@ export class RightComponent implements OnInit {
 
   onLikeMentor(selecged: Mentor){
     this.mentorService.liked(selecged);
-    // selecged.likeCount++; // it is also passiable
+    selecged.likeCount++; // it is also passiable
     this.router.navigate(['left'])
   }
 

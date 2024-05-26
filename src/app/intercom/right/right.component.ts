@@ -10,19 +10,18 @@ import { Router } from '@angular/router';
   styleUrl: './right.component.css'
 })
 export class RightComponent implements OnInit {
+  selectedMentor: Mentor | null = null;
 
-  selectedMentor: Mentor | undefined;
-
-  constructor(private mentorService: MentorService, private router:Router){}
+  constructor(private mentorService: MentorService, private router: Router) {}
 
   ngOnInit(): void {
-    this.selectedMentor = this.mentorService.selectedMentor
-    }
-
-  onLikeMentor(selecged: Mentor){
-    this.mentorService.liked(selecged);
-    selecged.likeCount++; // it is also passiable
-    this.router.navigate(['left'])
+    this.mentorService.selectedMentor$.subscribe(data => {
+      this.selectedMentor = data;
+    });
   }
 
+  onLikeMentor(selected: Mentor): void {
+    this.mentorService.liked(selected);
+    // this.router.navigate(['left'])
+  }
 }

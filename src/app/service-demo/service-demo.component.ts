@@ -14,7 +14,7 @@ export class ServiceDemoComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.fetchMentor$();
-    this.mentors = this.service.mentors;
+    // this.mentors = this.service.fetchMentor$;
     // this.service.fetchMentor$().subscribe(
     //   {
     //     next: (data)=> this.mentors = data,

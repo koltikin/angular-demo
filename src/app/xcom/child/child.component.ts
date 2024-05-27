@@ -15,7 +15,7 @@ export class ChildComponent {
     if(this.selectedC){
     this.selectedC.likeCount++;
     }
-    this.likeEvent.emit(this.selectedC?.idNum)
+    this.likeEvent.emit(this.selectedC?.id)
   }
 
 }

@@ -9,17 +9,27 @@ import { Router } from '@angular/router';
   styleUrl: './left.component.css'
 })
 export class LeftComponent implements OnInit {
-  mentors:Mentor[] = [];
+  mentors: Mentor[] = [];
 
-  constructor(private mentorService: MentorService, private router: Router){}
+  constructor(private mentorService: MentorService, private router: Router) {}
 
   ngOnInit(): void {
-    this.mentors = this.mentorService.mentors;
+    this.mentorService.fetchMentor$().subscribe({
+      next: (data) => {
+        this.mentors = data;
+        this.mentorService.mentors = data;
+        if (this.mentors.length > 0) {
+          this.onSelectMentor(this.mentors[0]);
+        }
+      },
+      error: (error) => console.log(error),
+      complete: () => console.log('completed')
+    });
   }
 
-  onSelectMentor(mentor: Mentor){
-    this.mentorService.selectedMentor = mentor;
-    this.router.navigate(['right']);
+  onSelectMentor(mentor: Mentor): void {
+    this.mentorService.onSelectMentor(mentor);
+    console.log(mentor.name);
+    // this.router.navigate(['right']);
   }
-
 }
